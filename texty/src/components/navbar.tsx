@@ -35,8 +35,18 @@ export default function Navbar() {
                 </Menubar>
               </div>
             </div>
+
+            {/* Login button for desktop */}
+            <div className="hidden md:block">
+              <Button>Login</Button>
+            </div>
+
+
             {/* Menu for Mobile */}
-            <div className="md:hidden">
+            <div className="md:hidden flex space-x-2">
+              <div>
+                <Button>Login</Button>
+              </div>
               <Menubar>
                 <MenubarMenu>
                   <MenubarTrigger asChild>
