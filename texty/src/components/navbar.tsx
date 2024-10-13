@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { Menubar, MenubarTrigger, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator } from "@/components/ui/menubar"
 import MenuIcon from '@mui/icons-material/Menu';
-import { Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+
+  const navigate = useNavigate()
+
     return (
         <div>
           <nav className="w-full px-4 py-4 bg-white shadow-md flex items-center justify-between">
@@ -17,7 +19,7 @@ export default function Navbar() {
               <div className="hidden md:block">
                 <Menubar>
                   <MenubarMenu>
-                    <MenubarTrigger>Home</MenubarTrigger>
+                    <MenubarTrigger onClick={() => navigate("/home")}>Home</MenubarTrigger>
                   </MenubarMenu>
                   <MenubarMenu>
                     <MenubarTrigger>About</MenubarTrigger>
