@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import "./index.css"
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import LoginPage from './components/LoginPage'
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom"
 
 const router = createBrowserRouter([
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />
+      },
+      {
+        path: "/login",
+        element: <LoginPage />
       },
       {
         index: true,

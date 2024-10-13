@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Menubar, MenubarTrigger, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator } from "@/components/ui/menubar"
 import MenuIcon from '@mui/icons-material/Menu';
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
@@ -38,7 +39,7 @@ export default function Navbar() {
 
             {/* Login button for desktop */}
             <div className="hidden md:block">
-              <Button>Login</Button>
+              <Link to="/login"><Button>Login</Button></Link>
             </div>
 
 
