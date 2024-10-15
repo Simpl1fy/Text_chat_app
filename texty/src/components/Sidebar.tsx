@@ -27,6 +27,9 @@ export default function Sidebar({ selectedContact, setSelectedContact }: Sidebar
         <button className='p-4 bg-red-500 border-2 rounded-xl' onClick={() => {setSelectedContact({name: "New Contact", id: 1}); console.log(selectedContact)}}>
           Change Contact
         </button>
+        <button className='p-4 bg-red-700 border-2 rounded-xl' onClick={() => {setSelectedContact({name: "", id: 0}); console.log(selectedContact)}}>
+          Remove Contact
+        </button>
         
         <div className='absolute bottom-4 right-2 hover:cursor-pointer'>
           <AddCircleIcon fontSize='large' />
